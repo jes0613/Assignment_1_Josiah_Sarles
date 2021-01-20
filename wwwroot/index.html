@@ -2,24 +2,85 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Josiah Sarles Portfolio</title>
+    <title>Josiah Sarles: Assignment #1</title>
     <link href="css/styles.css" rel="stylesheet" />
     <script src="scripts/scripts.js"></script>
+    <link rel="shortcut icon" href="img/Y-favicon.ico" />
 </head>
-<body>
+<body onload="onLoad()">
+    <div class="header">
+        <p class="header-text">JOSIAH</p>
+    </div>
+    <div class="bg-img">
+        
+    </div>
+    <div class="content row">
 
-    <h1>
-        Welcome to Josiah Sarles' Portfolio!
-    </h1>
-    <img src="img/Profile pic resize.jpg" style="height: 200px; width:200px;" />
-    <br />
+        <div class="column">
+            <div class="pad">
+                <h2>IS 413 Class</h2>
+                <p>
+                    In this class I hope to learn how to make web applications. This way, I can use that knowledge in my career to make awesome web applications or
+                    as least know how it works, so I can make recommendation on what a good web application should work and look like. 
+                </p>
 
-    <form action="/" method="post">
-        <label>Message:</label>
-        <br />
-        <textarea rows="5"></textarea>
-        <br />
-        <input type="submit" value="Send"/>
-    </form>
+                <h2>Top 3 Jobs</h2>
+                <p>
+                    #1: Product Management
+                    <br />
+                    #2: Techincal Operations Management
+                    <br />
+                    #3: Software Engineering
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="pad ex_pad">
+                <h2>Grade Calculator</h2>
+                <form>
+                    <label for="">Assignments:</label>
+                    <input type="number" name="" id="assignment" class="input" required>
+                    <label for="">/50%</label>
+                    <br><br>
+
+                    <label for="">Group Projects:</label>
+                    <input type="number" name="" id="group" class="input" required>
+                    <label for="">/10%</label>
+                    <br><br>
+
+                    <label for="">Quizzez:</label>
+                    <input type="number" name="" id="quiz" class="input" required onkeypress="">
+                    <label for="">/10%</label>
+                    <br><br>
+
+                    <label for="">Exams:</label>
+                    <input type="number" name="" id="exam" class="input" required>
+                    <label for="">/20%</label>
+                    <br><br>
+
+                    <label for="">INTEX:</label>
+                    <input type="number" name="" id="intex" class="input" required>
+                    <label for="">/10%</label>
+                    <br><br>
+
+                    <button type="button" id="btn" onclick="calcGPA()">CALCULATE</button><br><br>
+                    <button type="button" id="btn" onclick="clearGrade()">RESET</button><br><br>
+                </form>
+            </div>
+        </div>
+        <div class="column">
+            <div class="pad">
+                <h2>GPA Results</h2>
+                <div>
+                    <svg height="100" width="100" id="svg" class="svg_center">
+                        <circle id="myCircle" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="none"
+                                display="none" />
+                    </svg>
+                    <br>
+                    <p id="results" class="text_results"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
